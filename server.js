@@ -24,10 +24,7 @@ let isConnected = false;
 
 async function connectToMingoDB() {
   try {
-    await mongoose.connect(process.env.MONGO_CONN, {
-      useNewUrlParser: true,
-      useUnifiedToppology: true,
-    });
+    await mongoose.connect(process.env.MONGO_CONN);
     isConnected = true;
     console.log("connected to MongoDB");
   } catch (error) {
