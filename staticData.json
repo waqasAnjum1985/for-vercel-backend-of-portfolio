@@ -1,0 +1,18 @@
+onst contacts = [
+  {
+
+name :'Waqas Anjum',
+
+age : '40',
+
+gender : 'Male',
+
+email :'anjum.pharmacy@gmail.com',
+
+mobile : '+923455639363',
+
+address : 'PAKISTN',
+
+
+}
+]
