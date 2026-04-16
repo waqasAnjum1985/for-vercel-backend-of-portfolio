@@ -12,7 +12,7 @@ const portfolioRouter = require("./routes/portfolioRoute.js");
 const mongoose = require("mongoose");
 
 const corsOptions = {
-  origin: "https://anjum-pi.vercel.app",
+  origin: "https://anjum-pi.vercel.app/",
   credentials: true,
 };
 app.use(cors(corsOptions));
