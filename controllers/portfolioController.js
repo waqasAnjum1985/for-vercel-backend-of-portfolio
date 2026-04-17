@@ -320,7 +320,6 @@ exports.updateSidebar = async (req, res) => {
 
 //Admin login section section
 exports.adminLogin = async (req, res) => {
-
   try {
     const User = await user.findOne({
       userName: req.body.userName,
@@ -331,7 +330,7 @@ exports.adminLogin = async (req, res) => {
         message: "User not found",
       });
     }
-  
+
     const isMatch = await bcrypt.compare(req.body.password, User.password);
     if (!isMatch) {
       return res.status(401).json({
@@ -352,9 +351,9 @@ exports.adminLogin = async (req, res) => {
       .status(201)
       .cookie("token", token, {
         httpOnly: true,
-        secure: false,
+        secure: true,
         maxAge: 86600000,
-        sameSite: "lax",
+        sameSite: "none",
       })
       .json({
         User,
